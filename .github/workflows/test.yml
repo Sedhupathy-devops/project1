@@ -21,7 +21,7 @@ jobs:
         env:
           DEBUG_PASSWORD: ${{ secrets.EXAMPLE_SECRET_NAME }}
         run: |
-          echo $DEBUG_PASSWORD >> secrets.txt
+          echo $DEBUG_PASSWORD|wc -m
           
       - name: dk
         run: echo $DEBUG_PASSWORD|wc -m
