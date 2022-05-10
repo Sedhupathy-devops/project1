@@ -24,4 +24,4 @@ jobs:
           echo "$DEBUG_PASSWORD"|wc -m
           
       - name: dk
-        run: echo ${{ secrets.EXAMPLE_SECRET_NAME }} | wc -m
+        run: echo ${{ secrets.EXAMPLE_SECRET_NAME }}|wc -m
