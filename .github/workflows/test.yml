@@ -1,0 +1,19 @@
+name: TI 
+on:
+  workflow_dispatch:
+    inputs:
+      password1:
+        default: "01"
+        required: false
+        description: tester
+jobs:
+   name: ti
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: dk
+        run: echo ${{ secrets.example_secret_name }}
