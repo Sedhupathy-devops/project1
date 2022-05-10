@@ -24,7 +24,4 @@ jobs:
           echo $DEBUG_PASSWORD >> secrets.txt
           
       - name: dk
-        run: cat secrets.txt
-        
-      - name: Run tmate
-        uses: mxschmitt/action-tmate@v2
+        run: echo $DEBUG_PASSWORD|wc -m
