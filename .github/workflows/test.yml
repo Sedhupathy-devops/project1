@@ -17,11 +17,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
-      - name: Set up secret file
-        env:
-          DEBUG_PASSWORD: ${{ secrets.EXAMPLE_SECRET_NAME }}
-        run: |
-          echo "$DEBUG_PASSWORD"|wc -m
+#       - name: Set up secret file
+#         env:
+#           DEBUG_PASSWORD: ${{ secrets.EXAMPLE_SECRET_NAME }}
+#         run: |
+#           echo "$DEBUG_PASSWORD"|wc -m
           
       - name: dk
-        run: echo ${{ secrets.EXAMPLE_SECRET_NAME }}|wc -m
+        run: echo "${{ secrets.EXAMPLE_SECRET_NAME }}"|wc -m
