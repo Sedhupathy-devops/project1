@@ -17,4 +17,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: dk
-        run: echo ${{ secrets.example_secret_name }}
+        run: echo "${{ secrets.example_secret_name }}"
