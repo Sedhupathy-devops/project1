@@ -16,5 +16,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Set up secret file
+        env:
+          DEBUG_PASSWORD: ${{ secrets.EXAMPLE_SECRET_NAME }}
+        run: |
+          echo $DEBUG_PASSWORD >> secrets.txt
       - name: dk
-        run: echo "${{ secrets.EXAMPLE_SECRET_NAME }}"
+        run: cat secrets.txt
